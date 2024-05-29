@@ -1,0 +1,16 @@
+if __name__ == '__main__':
+     student_marks = []
+     score_list = []
+     for _ in range(int(input())):
+            name = input()
+            score = float(input())
+            student_marks.append([name,score])
+            score_list.append(score)
+     score_list = list(set(score_list))
+     score_list.sort()
+     second = score_list[1]
+     students = [i[0] for i in student_marks if i[1] == second]
+     students.sort()
+     for i in students:
+         print(i)
+       
